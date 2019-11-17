@@ -1,9 +1,9 @@
 //
-//  ContactsViewController.swift
-//  ContactsApplication
+//  AppDelegate.swift
+//  ContactVer2
 //
-//  Created by Kyle Melton on 4/29/17.
-//  Copyright © 2017 Kyle Melton. All rights reserved.
+//  Created by MacBook Pro on 12.11.2019.
+//  Copyright © 2019 MacBook Pro. All rights reserved.
 //
 
 import UIKit
@@ -21,10 +21,9 @@ class ContactsViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
-    //MARK: - Data Source
     
     func fetch() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -91,10 +90,7 @@ class ContactsViewController: UITableViewController {
         
         return cell
     }
-    
-    //MARK: - Navigation
-    
-    //Unwind segue
+
     @IBAction func unwindToContactList(segue: UIStoryboardSegue) {
         if let viewController = segue.source as? AddContactViewController {
             guard let name: String = viewController.nameTextField.text, let phoneNumber: String = viewController.phoneNumberTextField.text else { return }

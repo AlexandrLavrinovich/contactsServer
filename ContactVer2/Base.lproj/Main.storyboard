@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contact-->
+        <!--Контакт-->
         <scene sceneID="hJk-rD-SZg">
             <objects>
                 <viewController id="JiW-wg-ePE" customClass="ContactDetailViewController" customModule="ContactVer2" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AwD-s9-gLT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contact" id="Kbu-94-KqZ">
+                    <navigationItem key="navigationItem" title="Контакт" id="Kbu-94-KqZ">
                         <barButtonItem key="leftBarButtonItem" title="Готово" id="BbG-4p-VKF">
                             <connections>
                                 <action selector="done:" destination="JiW-wg-ePE" id="qt1-HH-Djy"/>
@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="2889.8550724637685" y="-324.10714285714283"/>
         </scene>
-        <!--Contacts View Controller-->
+        <!--Контакты-->
         <scene sceneID="SbH-SK-xNE">
             <objects>
                 <tableViewController id="M20-wy-BDc" customClass="ContactsViewController" customModule="ContactVer2" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,12 +176,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" id="IkD-YH-Vus">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="N13-I5-aei" detailTextLabel="d8C-Sv-MAX" style="IBUITableViewCellStyleValue1" id="IkD-YH-Vus">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IkD-YH-Vus" id="ckI-S7-J35">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N13-I5-aei">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d8C-Sv-MAX">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="n8x-Lq-Nku" kind="show" identifier="contactDetailSegue" id="u66-yC-eJc"/>
@@ -193,7 +209,7 @@
                             <outlet property="delegate" destination="M20-wy-BDc" id="8L8-Fh-LQc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cru-pc-qDH">
+                    <navigationItem key="navigationItem" title="Контакты" id="cru-pc-qDH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Idh-Nt-EBl">
                             <connections>
                                 <segue destination="2Gz-tO-zSD" kind="presentation" identifier="addContactSegue" id="4dB-KQ-ytg"/>
@@ -244,6 +260,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jXl-Q3-4BF"/>
+        <segue reference="4dB-KQ-ytg"/>
     </inferredMetricsTieBreakers>
 </document>

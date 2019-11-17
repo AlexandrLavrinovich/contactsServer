@@ -1,9 +1,9 @@
 //
-//  ContactDetailViewController.swift
-//  ContactsApplication
+//  AppDelegate.swift
+//  ContactVer2
 //
-//  Created by Kyle Melton on 4/29/17.
-//  Copyright © 2017 Kyle Melton. All rights reserved.
+//  Created by MacBook Pro on 12.11.2019.
+//  Copyright © 2019 MacBook Pro. All rights reserved.
 //
 
 import UIKit
@@ -37,12 +37,10 @@ class ContactDetailViewController: UIViewController {
         performSegue(withIdentifier: "unwindToContactList", sender: self)
     }
     
-    //MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editContact" {
             guard let viewController = segue.destination as? AddContactViewController else { return }
-            viewController.titleText = "Edit Contact"
+            viewController.titleText = "Изменить Контакт"
             viewController.contact = contact
             viewController.indexPathForContact = self.indexPath!
         }
