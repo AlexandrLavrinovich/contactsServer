@@ -25,6 +25,8 @@ class ContactsViewController: UITableViewController {
     }
     
     
+    
+    
     func fetch() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedObjectContext = appDelegate.persistentContainer.viewContext
@@ -38,28 +40,38 @@ class ContactsViewController: UITableViewController {
     
     func save(name: String, phoneNumber: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let uuid = UUID().uuidString
         let managedObjectContext = appDelegate.persistentContainer.viewContext
         guard let entity = NSEntityDescription.entity(forEntityName:"Contact", in: managedObjectContext) else { return }
         let contact = NSManagedObject(entity: entity, insertInto: managedObjectContext)
         contact.setValue(name, forKey: "name")
         contact.setValue(phoneNumber, forKey: "phoneNumber")
+        contact.setValue(uuid, forKey: "contactId")
         do {
             try managedObjectContext.save()
             self.contacts.append(contact)
+            API.createContact(name: name, phoneNumber: phoneNumber, contactId: uuid) { result in
+                guard result else { return }
+            }
         } catch let error as NSError {
             print("Couldn't save. \(error)")
         }
+        
     }
     
     func update(indexPath: IndexPath, name:String, phoneNumber: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedObjectContext = appDelegate.persistentContainer.viewContext
         let contact = contacts[indexPath.row]
+        guard let contactId = contact.value(forKey: "contactId") as? String else { return }
         contact.setValue(name, forKey:"name")
         contact.setValue(phoneNumber, forKey: "phoneNumber")
         do {
             try managedObjectContext.save()
             contacts[indexPath.row] = contact
+            API.editContact(name: name, phoneNumber: phoneNumber, contactId: contactId) { result in
+                guard result else { return }
+            }
         } catch let error as NSError {
             print("Couldn't update. \(error)")
         }
@@ -68,8 +80,18 @@ class ContactsViewController: UITableViewController {
     func delete(_ contact: NSManagedObject, at indexPath: IndexPath) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedObjectContext = appDelegate.persistentContainer.viewContext
+        guard let contactId = contact.value(forKey: "contactId") as? String else { return }
         managedObjectContext.delete(contact)
         contacts.remove(at: indexPath.row)
+        do {
+            try managedObjectContext.save()
+            API.deleteContact(contactId: contactId) { result in
+                guard result else { return }
+            }
+        } catch let error as NSError {
+            print("Couldn't save. \(error)")
+        }
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,7 +144,4 @@ class ContactsViewController: UITableViewController {
             viewController.indexPath = indexPath
         }
     }
-    
-    
-    
 }

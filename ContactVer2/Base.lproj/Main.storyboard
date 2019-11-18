@@ -10,7 +10,7 @@
         <!--Контакт-->
         <scene sceneID="hJk-rD-SZg">
             <objects>
-                <viewController id="JiW-wg-ePE" customClass="ContactDetailViewController" customModule="ContactVer2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JiW-wg-ePE" customClass="ContactDetailViewController" customModule="ContactsServer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RP6-WB-m8w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
         <!--Add Contact View Controller-->
         <scene sceneID="pIr-7g-y8u">
             <objects>
-                <viewController id="2Gz-tO-zSD" customClass="AddContactViewController" customModule="ContactVer2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Gz-tO-zSD" customClass="AddContactViewController" customModule="ContactsServer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u2P-Qt-2kY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +170,7 @@
         <!--Контакты-->
         <scene sceneID="SbH-SK-xNE">
             <objects>
-                <tableViewController id="M20-wy-BDc" customClass="ContactsViewController" customModule="ContactVer2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="M20-wy-BDc" customClass="ContactsViewController" customModule="ContactsServer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cA9-wR-ZhB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

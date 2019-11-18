@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522E478A238171C2002D4B94 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E4789238171C2002D4B94 /* API.swift */; };
+		522E478C2381C2D8002D4B94 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E478B2381C2D8002D4B94 /* Contact.swift */; };
+		522E479123833A53002D4B94 /* ContactVer2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 522E478F23833A53002D4B94 /* ContactVer2.xcdatamodeld */; };
 		5251DADA237C10090029FC43 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251DAD9237C10090029FC43 /* ContactsViewController.swift */; };
 		5251DADC237C102B0029FC43 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251DADB237C102B0029FC43 /* AddContactViewController.swift */; };
 		5251DAE0237C18B00029FC43 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251DADF237C18B00029FC43 /* ContactDetailViewController.swift */; };
 		5258B88A237ACD2F0093F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258B889237ACD2F0093F911 /* AppDelegate.swift */; };
 		5258B88C237ACD2F0093F911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258B88B237ACD2F0093F911 /* SceneDelegate.swift */; };
 		5258B891237ACD2F0093F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258B88F237ACD2F0093F911 /* Main.storyboard */; };
-		5258B894237ACD2F0093F911 /* ContactVer2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5258B892237ACD2F0093F911 /* ContactVer2.xcdatamodeld */; };
 		5258B896237ACD350093F911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5258B895237ACD350093F911 /* Assets.xcassets */; };
 		5258B899237ACD350093F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258B897237ACD350093F911 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522E4789238171C2002D4B94 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		522E478B2381C2D8002D4B94 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		522E479023833A53002D4B94 /* ContactVer2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactVer2.xcdatamodel; sourceTree = "<group>"; };
 		5251DAD9237C10090029FC43 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		5251DADB237C102B0029FC43 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		5251DADF237C18B00029FC43 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
-		5258B886237ACD2F0093F911 /* ContactVer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactVer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5258B886237ACD2F0093F911 /* ContactsServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5258B889237ACD2F0093F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5258B88B237ACD2F0093F911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5258B890237ACD2F0093F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5258B893237ACD2F0093F911 /* ContactVer2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactVer2.xcdatamodel; sourceTree = "<group>"; };
 		5258B895237ACD350093F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5258B898237ACD350093F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5258B89A237ACD350093F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +58,7 @@
 		5258B887237ACD2F0093F911 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5258B886237ACD2F0093F911 /* ContactVer2.app */,
+				5258B886237ACD2F0093F911 /* ContactsServer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,12 +70,14 @@
 				5258B88B237ACD2F0093F911 /* SceneDelegate.swift */,
 				5258B88F237ACD2F0093F911 /* Main.storyboard */,
 				5251DADF237C18B00029FC43 /* ContactDetailViewController.swift */,
+				522E4789238171C2002D4B94 /* API.swift */,
+				522E478B2381C2D8002D4B94 /* Contact.swift */,
 				5251DAD9237C10090029FC43 /* ContactsViewController.swift */,
 				5251DADB237C102B0029FC43 /* AddContactViewController.swift */,
 				5258B895237ACD350093F911 /* Assets.xcassets */,
 				5258B897237ACD350093F911 /* LaunchScreen.storyboard */,
+				522E478F23833A53002D4B94 /* ContactVer2.xcdatamodeld */,
 				5258B89A237ACD350093F911 /* Info.plist */,
-				5258B892237ACD2F0093F911 /* ContactVer2.xcdatamodeld */,
 			);
 			path = ContactVer2;
 			sourceTree = "<group>";
@@ -79,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5258B885237ACD2F0093F911 /* ContactVer2 */ = {
+		5258B885237ACD2F0093F911 /* ContactsServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5258B89D237ACD350093F911 /* Build configuration list for PBXNativeTarget "ContactVer2" */;
+			buildConfigurationList = 5258B89D237ACD350093F911 /* Build configuration list for PBXNativeTarget "ContactsServer" */;
 			buildPhases = (
 				5258B882237ACD2F0093F911 /* Sources */,
 				5258B883237ACD2F0093F911 /* Frameworks */,
@@ -91,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = ContactVer2;
+			name = ContactsServer;
 			productName = ContactVer2;
-			productReference = 5258B886237ACD2F0093F911 /* ContactVer2.app */;
+			productReference = 5258B886237ACD2F0093F911 /* ContactsServer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5258B881237ACD2F0093F911 /* Build configuration list for PBXProject "ContactVer2" */;
+			buildConfigurationList = 5258B881237ACD2F0093F911 /* Build configuration list for PBXProject "ContactsServer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5258B885237ACD2F0093F911 /* ContactVer2 */,
+				5258B885237ACD2F0093F911 /* ContactsServer */,
 			);
 		};
 /* End PBXProject section */
@@ -150,9 +156,11 @@
 				5251DADC237C102B0029FC43 /* AddContactViewController.swift in Sources */,
 				5258B88A237ACD2F0093F911 /* AppDelegate.swift in Sources */,
 				5251DAE0237C18B00029FC43 /* ContactDetailViewController.swift in Sources */,
+				522E479123833A53002D4B94 /* ContactVer2.xcdatamodeld in Sources */,
 				5258B88C237ACD2F0093F911 /* SceneDelegate.swift in Sources */,
+				522E478C2381C2D8002D4B94 /* Contact.swift in Sources */,
 				5251DADA237C10090029FC43 /* ContactsViewController.swift in Sources */,
-				5258B894237ACD2F0093F911 /* ContactVer2.xcdatamodeld in Sources */,
+				522E478A238171C2002D4B94 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5258B881237ACD2F0093F911 /* Build configuration list for PBXProject "ContactVer2" */ = {
+		5258B881237ACD2F0093F911 /* Build configuration list for PBXProject "ContactsServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5258B89B237ACD350093F911 /* Debug */,
@@ -340,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5258B89D237ACD350093F911 /* Build configuration list for PBXNativeTarget "ContactVer2" */ = {
+		5258B89D237ACD350093F911 /* Build configuration list for PBXNativeTarget "ContactsServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5258B89E237ACD350093F911 /* Debug */,
@@ -352,12 +360,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5258B892237ACD2F0093F911 /* ContactVer2.xcdatamodeld */ = {
+		522E478F23833A53002D4B94 /* ContactVer2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5258B893237ACD2F0093F911 /* ContactVer2.xcdatamodel */,
+				522E479023833A53002D4B94 /* ContactVer2.xcdatamodel */,
 			);
-			currentVersion = 5258B893237ACD2F0093F911 /* ContactVer2.xcdatamodel */;
+			currentVersion = 522E479023833A53002D4B94 /* ContactVer2.xcdatamodel */;
 			path = ContactVer2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
